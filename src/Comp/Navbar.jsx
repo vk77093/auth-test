@@ -14,6 +14,7 @@ import NoPage from '../Pages/NoPage';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ResetPage from '../Pages/ResetPage';
+import ClassPage, { CreateClass } from '../Pages/OtherPages/ClassPage/ClassPage';
 
 
 
@@ -74,7 +75,10 @@ let LogoutUser=()=>{
           <NavLink className="nav-link" to={'/profile'} user={userdata} >
             Profile
           </NavLink>
-        </li>       
+        </li>  
+        <li className='nav-item'>
+          <NavLink className={'nav-link'} to={'/classhow'}>Class Show</NavLink>
+          </li>     
       </ul>    
      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         {userdata==='' ? (<li className="nav-item">
@@ -104,6 +108,9 @@ let LogoutUser=()=>{
         <Route path='/reset/:id' element={<ResetPage/>}/>
         {/* <Route path='/reset/:id' Component={ResetPage}/> */}
         <Route path='*' element={<NoPage />}/>
+
+        <Route path='/classhow' element={<ClassPage/>}/>
+        <Route path='/createclass' element={<CreateClass/>}/>
         </Routes>
         </Router> 
         </>
