@@ -15,6 +15,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ResetPage from '../Pages/ResetPage';
 import ClassPage, { CreateClass } from '../Pages/OtherPages/ClassPage/ClassPage';
+import SectionPage from '../Pages/OtherPages/Section/SectionPage';
+import SubjectPage from '../Pages/OtherPages/SubjectPage';
 
 
 
@@ -78,7 +80,14 @@ let LogoutUser=()=>{
         </li>  
         <li className='nav-item'>
           <NavLink className={'nav-link'} to={'/classhow'}>Class Show</NavLink>
-          </li>     
+          
+          </li>
+          <li className='nav-item'>
+            <NavLink className={'nav-link'} to={'/sectiondata'}>Section Show</NavLink>
+            </li>  
+            <li className='nav-item'>
+            <NavLink className={'nav-link'} to={'/subjectShow'}>Subject Show</NavLink>
+            </li>   
       </ul>    
      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         {userdata==='' ? (<li className="nav-item">
@@ -111,6 +120,8 @@ let LogoutUser=()=>{
 
         <Route path='/classhow' element={<ClassPage/>}/>
         <Route path='/createclass' element={<CreateClass/>}/>
+        <Route path='/sectiondata' element={<SectionPage/>}/>
+        <Route path='/subjectShow' element={<SubjectPage/>}/>
         </Routes>
         </Router> 
         </>

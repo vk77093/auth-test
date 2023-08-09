@@ -67,7 +67,7 @@ let GotData=[];
 <td>{data.id}</td>
 <td>{data.class_name}</td>
 <td><ButtonComp buttonName={'Delete IT'} buttonStyle={'danger'} buttonType={'button'} actiononButton={()=>deleteClass(data.id)}/></td>
-<td><ButtonComp buttonName={'Update IT'} buttonStyle={'danger'} buttonType={'button'} actiononButton={()=>UpdateClass(data.id)}/></td>           
+<td><ButtonComp buttonName={'Update IT'} buttonStyle={'info'} buttonType={'button'} actiononButton={()=>UpdateClass(data.id)}/></td>           
 </tr>
         )
        })
@@ -101,7 +101,7 @@ if(buttonTitle ==='Add new Class'){
         
         }
     }).catch((error)=>{
-        console.log(error);
+        SetMessage2(error.response.data.message);
     });
 }else{
     const dataSetUp={
@@ -115,7 +115,7 @@ class_name:classname,
             getClass();
         }
     }).catch((error)=>{
-SetMessage2(error.response.data);
+SetMessage2(error.response.data.message);
     });
 }
 }
