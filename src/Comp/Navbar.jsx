@@ -16,7 +16,8 @@ import axios from 'axios';
 import ResetPage from '../Pages/ResetPage';
 import ClassPage, { CreateClass } from '../Pages/OtherPages/ClassPage/ClassPage';
 import SectionPage from '../Pages/OtherPages/Section/SectionPage';
-import SubjectPage from '../Pages/OtherPages/SubjectPage';
+import SubjectPage from '../Pages/OtherPages/ClassPage/SubjectPage';
+import StudentPage from '../Pages/OtherPages/ClassPage/StudentPage.jsx';
 
 
 
@@ -87,7 +88,10 @@ let LogoutUser=()=>{
             </li>  
             <li className='nav-item'>
             <NavLink className={'nav-link'} to={'/subjectShow'}>Subject Show</NavLink>
-            </li>   
+            </li>
+            <li className='nav-item'>
+              <NavLink className={'nav-link'} to={'/studentShow'}>Student Show</NavLink>
+              </li>   
       </ul>    
      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         {userdata==='' ? (<li className="nav-item">
@@ -122,6 +126,7 @@ let LogoutUser=()=>{
         <Route path='/createclass' element={<CreateClass/>}/>
         <Route path='/sectiondata' element={<SectionPage/>}/>
         <Route path='/subjectShow' element={<SubjectPage/>}/>
+        <Route path='/studentShow' element={<StudentPage/>}/>
         </Routes>
         </Router> 
         </>

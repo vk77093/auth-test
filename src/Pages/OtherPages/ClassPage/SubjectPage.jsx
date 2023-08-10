@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
-import { CardComp } from "../../Comp/FormComp/CardComp";
-import MainPage from "../../Comp/MainPage";
-import { ButtonComp } from "../../Comp/FormComp/ButtonComp";
-import { InputComp } from "../../Comp/FormComp/InputComp";
+import { CardComp } from "../../../Comp/FormComp/CardComp";
+import MainPage from "../../../Comp/MainPage";
+import { ButtonComp } from "../../../Comp/FormComp/ButtonComp";
+import { InputComp } from "../../../Comp/FormComp/InputComp";
 
 export default function SubjectPage(){
     const[subjectData,SetSubjectData]=useState([]);
