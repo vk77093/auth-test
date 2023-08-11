@@ -96,6 +96,7 @@ function SaveStudent(){
     .then((response)=>{
         if(response.status===201){
             SetMessage(response.data.message);
+            document.getElementById('stuform').reset();
             GetData();
         }else{
             SetMessage(response.data.message);
@@ -181,14 +182,22 @@ function DeleteSubject(id){
         SetMessage(error.response.data.message);
     })
 }
-
+function AddNewStudent(){
+    SetButtonTitle('Save Data');
+    SetIdGot('');
+    SetInputs({});
+    SetMessage('');
+}
 return(
     <>
     <MainPage>
         <div className="col-sm-6 col-md-6">
 <CardComp cardTitle={'List Of All Data'}>
 <div class="table-responsive">
-<table className="table table-bordered table-hover table-stripped">
+<table className="table table-bordered table-hover table-stripped caption-top">
+    <caption><ButtonComp buttonName={'Add New'} buttonType={'button'} buttonStyle={'secondary'} actiononButton={AddNewStudent}/>
+    <ButtonComp buttonName={'testGlobal'} buttonType={'button'} buttonStyle={'info'} actiononButton={()=>alert(window.fakeApiUrl)} />
+    </caption>
     <thead>
         <tr>
             <td>Id</td>

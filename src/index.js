@@ -8,9 +8,11 @@ import axios from 'axios';
 
 axios.defaults.baseURL='http://apitesting.test/api';
 var token=localStorage.getItem('logintoken');
+window.fakeApiUrl='https://fakestoreapi.com/';
 if(token !==null){
   axios.defaults.headers.common['Authorization']='Bearer '+localStorage.getItem('logintoken');
 }
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

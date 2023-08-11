@@ -18,6 +18,8 @@ import ClassPage, { CreateClass } from '../Pages/OtherPages/ClassPage/ClassPage'
 import SectionPage from '../Pages/OtherPages/Section/SectionPage';
 import SubjectPage from '../Pages/OtherPages/ClassPage/SubjectPage';
 import StudentPage from '../Pages/OtherPages/ClassPage/StudentPage.jsx';
+import Product, { AddProductPage } from '../Pages/OtherPages/FakeStore/Product';
+import ProductBeauty from '../Pages/OtherPages/FakeStore/ProductBeauty';
 
 
 
@@ -91,6 +93,9 @@ let LogoutUser=()=>{
             </li>
             <li className='nav-item'>
               <NavLink className={'nav-link'} to={'/studentShow'}>Student Show</NavLink>
+              </li>  
+              <li className='nav-item'>
+              <NavLink className={'nav-link'} to={'/products'}>Products</NavLink>
               </li>   
       </ul>    
      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -127,6 +132,9 @@ let LogoutUser=()=>{
         <Route path='/sectiondata' element={<SectionPage/>}/>
         <Route path='/subjectShow' element={<SubjectPage/>}/>
         <Route path='/studentShow' element={<StudentPage/>}/>
+        <Route path='/products' element={<Product/>}/>
+        <Route path='/productbeauty' element={<ProductBeauty/>}/>
+        <Route path='/newproduct' element={<AddProductPage/>}/>
         </Routes>
         </Router> 
         </>
