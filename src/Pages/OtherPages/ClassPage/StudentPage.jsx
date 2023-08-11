@@ -181,11 +181,13 @@ function DeleteSubject(id){
         SetMessage(error.response.data.message);
     })
 }
+
 return(
     <>
     <MainPage>
         <div className="col-sm-6 col-md-6">
 <CardComp cardTitle={'List Of All Data'}>
+<div class="table-responsive">
 <table className="table table-bordered table-hover table-stripped">
     <thead>
         <tr>
@@ -201,6 +203,7 @@ return(
 {GotData}
     </tbody>
 </table>
+</div>
 </CardComp>
         </div>
         <div className="col-sm-6 col-md-6">
@@ -237,6 +240,7 @@ inputType={'email'} inputValue={inputs.email} ChangeEventCatch={HandleChange}/>
 inputType={'number'} inputValue={inputs.number} ChangeEventCatch={HandleChange}/>
 <ButtonComp buttonName={buttonTitle} buttonStyle={'info'} buttonType={'submit'}/>
 </form>
+
 </CardComp>
 
         </div>

@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios';
 
+
 axios.defaults.baseURL='http://apitesting.test/api';
 var token=localStorage.getItem('logintoken');
 if(token !==null){
@@ -15,6 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+
   </React.StrictMode>
 );
 
